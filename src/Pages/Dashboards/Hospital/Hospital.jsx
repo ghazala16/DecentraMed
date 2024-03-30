@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import { create } from "ipfs-http-client";
+import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import Loading from '../../../Components/Loading/Loading';
 import Patient from '../../../Components/Patient/Patient';
 import Record from '../../../Components/Record/Record';
-import "./Hospital.css";
-import { getWeb3 } from "../../../utils.js";
 import DMed from "../../../contracts/DMed.json";
-import Loading from '../../../Components/Loading/Loading';
-import { useHistory } from 'react-router-dom';
-import { create } from "ipfs-http-client";
+import { getWeb3 } from "../../../utils.js";
+import "./Hospital.css";
 
 const Hospital = () => {
 
@@ -106,7 +106,9 @@ const Hospital = () => {
         reader.onloadend = () => {
             setPatientBuffer(Buffer(reader.result));
         }
-    }
+        if (file) { // Check if file exists before reading
+            reader.readAsArrayBuffer(file);
+        }    }
 
     const handleSubmitPatient = async (e) => {
         e.preventDefault();
@@ -143,6 +145,9 @@ const Hospital = () => {
         reader.readAsArrayBuffer(file);
         reader.onloadend = () => {
             setRecordBuffer(Buffer(reader.result));
+        }
+        if (file) { // Check if file exists before reading
+            reader.readAsArrayBuffer(file);
         }
     }
 

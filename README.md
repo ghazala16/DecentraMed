@@ -2,7 +2,9 @@
 <div align="center">
   <h1 align="center">Decentra Med</h1>
   <p align="center">
+  <!--
     <a href="https://kushagrasingh772.github.io/DecentraMed/">View Demo</a>
+    -->
   </p>
 </div>
 
@@ -123,19 +125,17 @@ The application offers a variety of services. Some of them open for the public t
 
 _To download the source code and on your machine and get it up and running, follow the given steps_
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/kushagrasingh772/DecentraMed.git
+
    ```
-2. Install NPM packages
+1. Install NPM packages
    ```sh
    npm install
    ```
-3. Run the Application 
+2. Run the Application 
    ```sh
     npm start
    ```
-4. Build for production
+3. Build for production
    ```sh
     npm run build
    ```
@@ -143,10 +143,13 @@ _To download the source code and on your machine and get it up and running, foll
 <!-- MADE BY -->
 <a id="made-by"></a>
 
+
+<!--
 ## Made By
 <table>
   <tbody><tr>
-    <td align="center"><a href="https://github.com/kushagrasingh772"><img src="https://avatars.githubusercontent.com/kushagrasingh772" width="100px;"><br><sub><b>Kushagra Singh</b></sub></a><br/></a></td>
+    <td align="center"><a href="https://github.com/ghazala16"><img src="https://avatars.githubusercontent.com/u/129306652?s=400&u=79a9231c0392d92632695b07d6e776bdb8b4f1e0&v=4" width="100px;"><br><sub><b>Kushagra Singh</b></sub></a><br/></a></td>
     </td>
   </tbody></tr>
 </table>
+-->

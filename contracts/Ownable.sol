@@ -9,7 +9,7 @@ contract Ownable {
     address internal owner;
     mapping(address => bool) internal admin;
 
-    constructor() public{
+    constructor() {
         owner = msg.sender;
         admin[msg.sender] = true;
     }
